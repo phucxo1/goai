@@ -79,10 +79,27 @@ function updateCounterDisplay() {
 
 function animateCounter() {
     const counterDisplay = document.getElementById('counter');
+    
+    // Thêm class animation
+    counterDisplay.classList.add('counter-animate');
+    
+    // Scale animation
     counterDisplay.style.transform = 'scale(1.2)';
+    
+    // Thêm hiệu ứng glow
+    if (counterValue > 0) {
+        counterDisplay.style.textShadow = '0 0 20px #28a745, 0 0 30px #28a745';
+    } else if (counterValue < 0) {
+        counterDisplay.style.textShadow = '0 0 20px #dc3545, 0 0 30px #dc3545';
+    } else {
+        counterDisplay.style.textShadow = '0 0 20px #667eea, 0 0 30px #667eea';
+    }
+    
     setTimeout(() => {
         counterDisplay.style.transform = 'scale(1)';
-    }, 150);
+        counterDisplay.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.1)';
+        counterDisplay.classList.remove('counter-animate');
+    }, 200);
 }
 
 // === TODO FUNCTIONALITY ===
