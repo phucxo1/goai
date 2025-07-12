@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Cursor với GitHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Test Cursor với GitHub</h1>
+            <p>Dự án nhỏ để kiểm tra tích hợp Cursor và GitHub</p>
+        </header>
+
+        <main>
+            <section class="counter-section">
+                <h2>Bộ đếm tương tác</h2>
+                <div class="counter-display">
+                    <span id="counter">0</span>
+                </div>
+                <div class="counter-buttons">
+                    <button id="decrease" class="btn btn-danger">-</button>
+                    <button id="reset" class="btn btn-secondary">Reset</button>
+                    <button id="increase" class="btn btn-success">+</button>
+                </div>
+            </section>
+
+            <section class="todo-section">
+                <h2>Danh sách Todo</h2>
+                <div class="todo-input">
+                    <input type="text" id="todoInput" placeholder="Nhập công việc cần làm...">
+                    <button id="addTodo" class="btn btn-primary">Thêm</button>
+                </div>
+                <ul id="todoList" class="todo-list"></ul>
+            </section>
+
+            <section class="info-section">
+                <h2>Thông tin dự án</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🛠️ Công nghệ</h3>
+                        <p>HTML5, CSS3, JavaScript ES6</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📅 Ngày tạo</h3>
+                        <p id="currentDate"></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🎯 Mục đích</h3>
+                        <p>Test tích hợp Cursor + GitHub</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 - Được tạo bởi Cursor AI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
