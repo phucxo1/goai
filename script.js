@@ -274,6 +274,31 @@ window.exportData = exportData;
 window.toggleTodo = toggleTodo;
 window.deleteTodo = deleteTodo;
 
+// Thêm tính năng keyboard shortcuts info
+function showKeyboardShortcuts() {
+    const shortcuts = [
+        '⬆️ Arrow Up: Tăng counter',
+        '⬇️ Arrow Down: Giảm counter', 
+        '🔄 R: Reset counter',
+        '↩️ Enter: Thêm todo (khi focus vào input)',
+        '🎮 F1: Hiển thị shortcuts này'
+    ];
+    
+    alert('🎮 Keyboard Shortcuts:\n\n' + shortcuts.join('\n'));
+}
+
+// Thêm F1 shortcut
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'F1') {
+        e.preventDefault();
+        showKeyboardShortcuts();
+    }
+});
+
+// Expose function to global scope
+window.showKeyboardShortcuts = showKeyboardShortcuts;
+
 // Log thông tin khởi tạo
 console.log('📝 Script.js đã được tải thành công!');
-console.log('🔧 Các function đã được khởi tạo và sẵn sàng sử dụng.'); 
+console.log('🔧 Các function đã được khởi tạo và sẵn sàng sử dụng.');
+console.log('💡 Nhấn F1 để xem keyboard shortcuts!'); 
