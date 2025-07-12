@@ -11,6 +11,7 @@ function initializeApp() {
     initializeCounter();
     initializeTodo();
     initializeInfo();
+    initializeThemeToggle();
     
     // Hiển thị thông báo chào mừng
     showWelcomeMessage();
@@ -297,6 +298,38 @@ document.addEventListener('keydown', (e) => {
 
 // Expose function to global scope
 window.showKeyboardShortcuts = showKeyboardShortcuts;
+
+// === THEME TOGGLE FUNCTIONALITY ===
+function initializeThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggle.innerHTML = '☀️ Light Mode';
+    }
+    
+    // Theme toggle event listener
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        
+        if (document.body.classList.contains('dark-theme')) {
+            themeToggle.innerHTML = '☀️ Light Mode';
+            localStorage.setItem('theme', 'dark');
+            console.log('🌙 Chuyển sang Dark Mode');
+        } else {
+            themeToggle.innerHTML = '🌙 Dark Mode';
+            localStorage.setItem('theme', 'light');
+            console.log('☀️ Chuyển sang Light Mode');
+        }
+    });
+}
+
+// Expose theme function to global scope
+window.toggleTheme = () => {
+    document.getElementById('themeToggle').click();
+};
 
 // Log thông tin khởi tạo
 console.log('📝 Script.js đã được tải thành công!');

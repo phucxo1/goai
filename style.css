@@ -276,4 +276,68 @@ footer p {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    margin-top: 1rem;
+}
+
+/* Dark theme */
+body.dark-theme {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+}
+
+body.dark-theme section {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme section h2 {
+    color: #ffffff;
+}
+
+body.dark-theme #todoInput {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #e0e0e0;
+}
+
+body.dark-theme #todoInput::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body.dark-theme #todoInput:focus {
+    border-color: #667eea;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-theme .todo-item {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border-left: 4px solid #667eea;
+}
+
+body.dark-theme .info-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .info-card h3 {
+    color: #81c784;
+}
+
+body.dark-theme .info-card p {
+    color: #b0b0b0;
+}
+
+/* Theme transition */
+body {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+section {
+    transition: background 0.3s ease, color 0.3s ease;
 } 
